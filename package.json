@@ -2,29 +2,6 @@
   "name": "mika-design",
   "version": "1.0.0",
   "description": "A React UI Based on Ant Design 6.1.0",
-  "license": "MIT",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/ant-design"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ant-design/ant-design"
-  },
-  "bugs": {
-    "url": "https://github.com/ant-design/ant-design/issues"
-  },
-  "keywords": [
-    "ant",
-    "component",
-    "components",
-    "design",
-    "framework",
-    "frontend",
-    "react",
-    "react-component",
-    "ui"
-  ],
   "sideEffects": [
     "*.css"
   ],
@@ -325,9 +302,6 @@
     "webpack-bundle-analyzer": "^5.0.1",
     "xhr-mock": "^2.5.1"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "size-limit": [
     {
       "path": "./dist/antd.min.js",
@@ -341,8 +315,5 @@
     }
   ],
   "title": "Mika Design",
-  "tnpm": {
-    "mode": "npm"
-  },
   "author": "Daryl"
 }
