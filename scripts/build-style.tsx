@@ -117,6 +117,10 @@ const defaultNode = () => (
 
 function extractStyle(customTheme?: any): string {
   const cache = createCache();
+  // 创建cache缓存样式
+  // 通过renderToString渲染组件，触发组件的useStyle方法，及genStyleHooks;
+  // 最终定位：import { genStyleUtils } from '@ant-design/cssinjs-utils';
+  // css通过最终查询的useStyleRegister方法完成注入：(0, _cssinjs.useStyleRegister)((0, _objectSpread3.default)((0, _objectSpread3.default)({}, sharedConfig), {},
   renderToString(
     <antd.ConfigProvider theme={{ hashed: false }}>
       <StyleProvider cache={cache}>
@@ -124,10 +128,8 @@ function extractStyle(customTheme?: any): string {
       </StyleProvider>
     </antd.ConfigProvider>,
   );
-
   // Grab style from cache
   const styleText = extStyle(cache, { plain: true, types: 'style' });
-
   return styleText;
 }
 

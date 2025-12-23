@@ -29,8 +29,8 @@ export default function derivative(token: SeedToken): MapToken {
       prev = { ...prev, ...cur };
       return prev;
     }, {} as MapToken);
-
-  return {
+  //custom color here！！ for mika pink color!
+  const rsltToken =  {
     ...token,
     ...colorPalettes,
     // Colors
@@ -46,5 +46,19 @@ export default function derivative(token: SeedToken): MapToken {
     ...genControlHeight(token),
     // Others
     ...genCommonMapToken(token),
+    colorPrimaryBg: '#e6f4ff',
+    colorPrimaryBgHover: '#bae0ff',
+    colorPrimaryBorder: '#91caff',
+    colorPrimaryBorderHover: '#69b1ff',
+    colorPrimaryHover: '#fbe2f0',
+    colorPrimary: '#ffc6e6',
+    colorPrimaryActive: '#ffc6e6',
+    colorPrimaryTextHover: '#ffc6e6',
+    colorPrimaryText: '#ffc6e6',
+    colorPrimaryTextActive: '#ffc6e6',
+    colorLinkHover: '#fbe2f0',
+    colorLink:'#ffc6e6',
+    colorLinkActive:'#ffc6e6'
   };
+  return rsltToken
 }

@@ -58,10 +58,9 @@ const Logo: React.FC<LogoProps> = ({ isZhCN }) => {
   const { search } = useLocation();
   const { styles } = useStyle();
   return (
-    <h1>
+    <h1 style={{'background':'#d6e0f9'}}>
       <Link to={utils.getLocalizedPathname('/', isZhCN, search)} className={styles.logo}>
-        <img src={logoSrc} draggable={false} alt="logo" />
-        <span className={styles.title}>Ant Design</span>
+        <img style={{'width':'160px','height':'auto'}} draggable="false" alt="logo" src="https://franxxdaryl.site/static/brand.f263501a.png" />
       </Link>
     </h1>
   );

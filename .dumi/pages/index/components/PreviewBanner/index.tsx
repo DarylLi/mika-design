@@ -17,13 +17,13 @@ const ComponentsBlock = React.lazy(() => import('./ComponentsBlock'));
 
 const locales = {
   cn: {
-    slogan: '助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～',
+    slogan: 'Hello！组件自定义改造中，感谢Antd的技术力支持！',
     start: '开始使用',
     designLanguage: '设计语言',
   },
   en: {
     slogan:
-      'Help designers/developers building beautiful products more flexible and working with happiness',
+      '.............',
     start: 'Getting Started',
     designLanguage: 'Design Language',
   },
@@ -158,7 +158,7 @@ const PreviewBanner: React.FC<Readonly<React.PropsWithChildren>> = (props) => {
         </Suspense>
         <div className={styles.mask} />
         <Typography className={styles.typography}>
-          <h1>Ant Design</h1>
+          <h1>Mika Design</h1>
           <p>{locale.slogan}</p>
         </Typography>
         <Flex gap="middle" className={styles.btnWrap}>

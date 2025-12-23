@@ -68,9 +68,9 @@ import type { TreeSelectProps } from '../tree-select';
 import type { UploadProps } from '../upload';
 import type { RenderEmptyHandler } from './defaultRenderEmpty';
 
-export const defaultPrefixCls = 'ant';
+export const defaultPrefixCls = 'mika';
 
-export const defaultIconPrefixCls = 'anticon';
+export const defaultIconPrefixCls = 'mikaicon';
 
 export interface Theme {
   primaryColor?: string;
