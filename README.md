@@ -4,7 +4,7 @@
 
 <h1>Mika Design</h1>
 
-A React UI Based on Ant Design 6.1.0 
+A React UI Based on Ant Design 6.1.0
 
 [![CI status][github-action-image]][github-action-url] [![codecov][codecov-image]][codecov-url] [![NPM version][npm-image]][npm-url] [![NPM downloads][download-image]][download-url] [![][bundlephobia-image]][bundlephobia-url] [![][jsdelivr-image]][jsdelivr-url]
 
