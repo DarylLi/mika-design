@@ -24,7 +24,7 @@ const genButtonBorderStyle = (buttonTypeCls: string, borderColor: string) => ({
 
 const genGroupStyle: GenerateStyle<ButtonToken> = (token) => {
   const { componentCls, fontSize, lineWidth, groupBorderColor, colorErrorHover } = token;
-
+  console.log(componentCls);
   return {
     [`${componentCls}-group`]: [
       {

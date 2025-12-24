@@ -1,5 +1,5 @@
 import type { CSSInterpolation, CSSObject } from '@ant-design/cssinjs';
-import { unit } from '@ant-design/cssinjs';
+import { Keyframes, unit } from '@ant-design/cssinjs';
 
 import { genFocusStyle, resetIcon } from '../../style';
 import type { GenerateStyle } from '../../theme/internal';
@@ -11,6 +11,11 @@ import genVariantStyle from './variant';
 
 export type { ComponentToken };
 
+const animation = new Keyframes(`lights`, {
+  to: {
+      'background-position': '30px 0',
+  }
+});
 // ============================== Shared ==============================
 const genSharedButtonStyle: GenerateStyle<ButtonToken, CSSObject> = (token): CSSObject => {
   const {
@@ -222,11 +227,11 @@ const genBlockButtonStyle: GenerateStyle<ButtonToken> = (token) => {
 };
 
 // ============================== Export ==============================
-export default genStyleHooks(
+export default (genStyleHooks as any)(
   'Button',
-  (token) => {
+  (token:any) => {
     const buttonToken = prepareToken(token);
-
+    console.log(genGroupStyle(buttonToken))
     return [
       // Shared
       genSharedButtonStyle(buttonToken),
@@ -244,6 +249,27 @@ export default genStyleHooks(
 
       // Button Group
       genGroupStyle(buttonToken),
+      // others
+      {
+        '.mika-btn': [
+          {
+            'color':'#dedede!important'
+          },
+          {
+            '&:before':{
+              content: '""!important',
+              position: 'absolute!important',
+              inset: '0',
+              background: 'repeating-linear-gradient(90deg, red 0 10px, green 10px 20px, gold 20px 30px)',
+              opacity: '0.25',
+              animationName: animation,
+              animationDuration: `1.5s`,
+              animationTimingFunction: 'linear',
+              animationIterationCount: 'infinite',
+            }
+        }
+      ],
+      },
     ];
   },
   prepareComponentToken,
