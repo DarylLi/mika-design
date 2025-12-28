@@ -79,6 +79,6 @@ const seedToken: SeedToken = {
   wireframe: false,
 
   // Motion
-  motion: true,
+  motion: true
 };
 export default seedToken;

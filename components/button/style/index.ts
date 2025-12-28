@@ -8,7 +8,7 @@ import genGroupStyle from './group';
 import type { ButtonToken, ComponentToken } from './token';
 import { prepareComponentToken, prepareToken } from './token';
 import genVariantStyle from './variant';
-
+import { defaultPrefixCls } from '../../config-provider/context';
 export type { ComponentToken };
 
 const animation = new Keyframes(`lights`, {
@@ -231,7 +231,7 @@ export default (genStyleHooks as any)(
   'Button',
   (token:any) => {
     const buttonToken = prepareToken(token);
-    console.log(genGroupStyle(buttonToken))
+    console.log(defaultPrefixCls)
     return [
       // Shared
       genSharedButtonStyle(buttonToken),
@@ -251,7 +251,7 @@ export default (genStyleHooks as any)(
       genGroupStyle(buttonToken),
       // others
       {
-        '.mika-btn': [
+        [`.${defaultPrefixCls}-btn`]: [
           {
             'color':'#dedede!important'
           },

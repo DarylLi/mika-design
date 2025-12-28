@@ -50,7 +50,7 @@ export const generateNeutralColorPalettes: GenerateNeutralColorMap = (
     colorBgSpotlight: getAlphaColor(colorTextBase, 0.85),
     colorBgBlur: 'transparent',
 
-    colorBorder: getSolidColor(colorBgBase, 15),
+    colorBorder: '#e7adcefc',//getSolidColor(colorBgBase, 15),
     colorBorderDisabled: getSolidColor(colorBgBase, 15),
     colorBorderSecondary: getSolidColor(colorBgBase, 6),
   };
