@@ -1,6 +1,6 @@
 /*!
  * 
- * mika-design v1.0.0
+ * mika-design v1.0.1
  *
  * Copyright 2015-present, Alipay, Inc.
  * All rights reserved.
