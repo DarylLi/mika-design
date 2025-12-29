@@ -5,7 +5,7 @@ export declare function convertLegacyProps(type?: LegacyButtonType): Pick<BaseBu
 export declare function isString(str: unknown): str is string;
 export declare function isUnBorderedButtonVariant(type?: ButtonVariantType): type is "link" | "text";
 export declare function spaceChildren(children: React.ReactNode, needInserted: boolean, style?: React.CSSProperties, className?: string): React.JSX.Element[] | null | undefined;
-declare const _ButtonTypes: readonly ["default", "primary", "dashed", "link", "text"];
+declare const _ButtonTypes: readonly ["default", "primary", "dashed", "link", "text", "snow"];
 export type ButtonType = (typeof _ButtonTypes)[number];
 declare const _ButtonShapes: readonly ["default", "circle", "round", "square"];
 export type ButtonShape = (typeof _ButtonShapes)[number];

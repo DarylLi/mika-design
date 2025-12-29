@@ -25,6 +25,7 @@ const genGroupStyle = token => {
     groupBorderColor,
     colorErrorHover
   } = token;
+  console.log(componentCls);
   return {
     [`${componentCls}-group`]: [{
       position: 'relative',

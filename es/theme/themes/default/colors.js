@@ -17,7 +17,7 @@ export const generateColorPalettes = baseColor => {
 };
 export const generateNeutralColorPalettes = (bgBaseColor, textBaseColor) => {
   const colorBgBase = bgBaseColor || '#fff';
-  const colorTextBase = textBaseColor || '#000';
+  const colorTextBase = textBaseColor === '#8a0852ff' ? textBaseColor : '#8a0852ff';
   return {
     colorBgBase,
     colorTextBase,
@@ -37,7 +37,8 @@ export const generateNeutralColorPalettes = (bgBaseColor, textBaseColor) => {
     colorBgElevated: getSolidColor(colorBgBase, 0),
     colorBgSpotlight: getAlphaColor(colorTextBase, 0.85),
     colorBgBlur: 'transparent',
-    colorBorder: getSolidColor(colorBgBase, 15),
+    colorBorder: '#e7adcefc',
+    //getSolidColor(colorBgBase, 15),
     colorBorderDisabled: getSolidColor(colorBgBase, 15),
     colorBorderSecondary: getSolidColor(colorBgBase, 6)
   };

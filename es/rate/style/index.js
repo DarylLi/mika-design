@@ -92,7 +92,8 @@ const genRateStyle = token => {
 };
 // ============================== Export ==============================
 export const prepareComponentToken = token => ({
-  starColor: token.yellow6,
+  starColor: '#ffc6e6',
+  //token.yellow6,
   starSize: token.controlHeight * 0.625,
   starSizeSM: token.controlHeightSM * 0.625,
   starSizeLG: token.controlHeightLG * 0.625,

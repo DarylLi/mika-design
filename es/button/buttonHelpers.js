@@ -75,7 +75,7 @@ export function spaceChildren(children, needInserted, style, className) {
   });
   return React.Children.map(childList, child => splitCNCharsBySpace(child, needInserted, style, className));
 }
-const _ButtonTypes = ['default', 'primary', 'dashed', 'link', 'text'];
+const _ButtonTypes = ['default', 'primary', 'dashed', 'link', 'text', 'snow'];
 const _ButtonShapes = ['default', 'circle', 'round', 'square'];
 const _ButtonHTMLTypes = ['submit', 'button', 'reset'];
 export const _ButtonVariantTypes = ['outlined', 'dashed', 'solid', 'filled', 'text', 'link'];

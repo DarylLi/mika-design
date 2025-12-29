@@ -1,9 +1,17 @@
-import { unit } from '@ant-design/cssinjs';
+import { Keyframes, unit } from '@ant-design/cssinjs';
 import { genFocusStyle, resetIcon } from '../../style';
 import { genStyleHooks, mergeToken } from '../../theme/internal';
 import genGroupStyle from './group';
 import { prepareComponentToken, prepareToken } from './token';
 import genVariantStyle from './variant';
+import { defaultPrefixCls } from '../../config-provider/context';
+const animation = new Keyframes(`lights`, {
+  to: {
+    // 'background-position': '30px 0',
+    transform: 'translateY(120px)',
+    opacity: '0'
+  }
+});
 // ============================== Shared ==============================
 const genSharedButtonStyle = token => {
   const {
@@ -188,6 +196,7 @@ const genBlockButtonStyle = token => {
 // ============================== Export ==============================
 export default genStyleHooks('Button', token => {
   const buttonToken = prepareToken(token);
+  console.log(defaultPrefixCls);
   return [
   // Shared
   genSharedButtonStyle(buttonToken),
@@ -198,7 +207,47 @@ export default genStyleHooks('Button', token => {
   // Variant
   genVariantStyle(buttonToken),
   // Button Group
-  genGroupStyle(buttonToken)];
+  genGroupStyle(buttonToken),
+  // others
+  {
+    [`.${defaultPrefixCls}-btn-snow`]: [{
+      color: '#fff',
+      borderWidth: '0px!important',
+      overflow: 'hidden',
+      'background': 'linear-gradient(135deg, #1e3a8a, #0284c7)',
+      'boxShadow': '0 15px 30px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.2)',
+      'span.snow-item': {
+        color: 'white',
+        position: 'absolute',
+        top: '-10px',
+        animationName: animation,
+        animationDuration: `4s`,
+        animationTimingFunction: 'linear',
+        animationIterationCount: 'infinite',
+        opacity: '0.8'
+      },
+      '&:hover': {
+        borderWidth: '0px!important',
+        'color': '#fff!important',
+        transform: 'translateY(-4px) scale(1.02)',
+        'boxShadow': '0 25px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(246, 196, 83, 0.6)'
+      }
+    }
+    //   {
+    //     '&:before':{
+    //       content: '""!important',
+    //       position: 'absolute!important',
+    //       inset: '0',
+    //       background: 'repeating-linear-gradient(90deg, red 0 10px, green 10px 20px, gold 20px 30px)',
+    //       opacity: '0.25',
+    //       animationName: animation,
+    //       animationDuration: `1.5s`,
+    //       animationTimingFunction: 'linear',
+    //       animationIterationCount: 'infinite',
+    //     }
+    // }
+    ]
+  }];
 }, prepareComponentToken, {
   unitless: {
     fontWeight: true,

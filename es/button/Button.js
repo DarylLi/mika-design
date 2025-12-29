@@ -178,6 +178,22 @@ const InternalCompoundedButton = /*#__PURE__*/React.forwardRef((props, ref) => {
       buttonRef.current.focus();
     }
   }, []);
+  // show snow effect
+  useEffect(() => {
+    if (type === 'snow') {
+      const snowBtn = mergedRef.current;
+      setInterval(() => {
+        const snow = document.createElement("span");
+        snow.innerHTML = '\u2744';
+        snow.setAttribute('class', 'snow-item');
+        snow.style.left = Math.random() * 100 + "%";
+        snow.style.fontSize = Math.random() * 10 + 10 + "px";
+        snow.style.animationDuration = Math.random() * 2 + 3 + "s";
+        snowBtn?.appendChild(snow);
+        setTimeout(() => snow.remove(), 5000);
+      }, 300);
+    }
+  }, []);
   // ========================= Events =========================
   const handleClick = React.useCallback(e => {
     // FIXME: https://github.com/ant-design/ant-design/issues/30207
