@@ -24,7 +24,7 @@ export const generateNeutralColorPalettes: GenerateNeutralColorMap = (
   textBaseColor: string,
 ) => {
   const colorBgBase = bgBaseColor || '#fff';
-  const colorTextBase = textBaseColor || '#000';
+  const colorTextBase = '#8a0852ff';//textBaseColor || '#000';
 
   return {
     colorBgBase,

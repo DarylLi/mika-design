@@ -13,7 +13,9 @@ export type { ComponentToken };
 
 const animation = new Keyframes(`lights`, {
   to: {
-      'background-position': '30px 0',
+      // 'background-position': '30px 0',
+      transform: 'translateY(120px)',
+      opacity : '0'
   }
 });
 // ============================== Shared ==============================
@@ -251,23 +253,43 @@ export default (genStyleHooks as any)(
       genGroupStyle(buttonToken),
       // others
       {
-        [`.${defaultPrefixCls}-btn`]: [
+        [`.${defaultPrefixCls}-btn-snow`]: [
           {
-            'color':'#dedede!important'
-          },
-          {
-            '&:before':{
-              content: '""!important',
-              position: 'absolute!important',
-              inset: '0',
-              background: 'repeating-linear-gradient(90deg, red 0 10px, green 10px 20px, gold 20px 30px)',
-              opacity: '0.25',
-              animationName: animation,
-              animationDuration: `1.5s`,
-              animationTimingFunction: 'linear',
-              animationIterationCount: 'infinite',
+            color:'#fff',
+            borderWidth: '0px!important',
+            overflow: 'hidden',
+            'background':'linear-gradient(135deg, #1e3a8a, #0284c7)',
+            'boxShadow': '0 15px 30px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.2)',
+            'span.snow-item':{
+                color:'white',
+                position: 'absolute',
+                top: '-10px',
+                animationName: animation,
+                animationDuration: `4s`,
+                animationTimingFunction: 'linear',
+                animationIterationCount: 'infinite',
+                opacity: '0.8'
+            },
+            '&:hover':{
+                borderWidth: '0px!important',
+                'color':'#fff!important',
+                transform: 'translateY(-4px) scale(1.02)',
+                'boxShadow': '0 25px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(246, 196, 83, 0.6)'
             }
-        }
+          },
+        //   {
+        //     '&:before':{
+        //       content: '""!important',
+        //       position: 'absolute!important',
+        //       inset: '0',
+        //       background: 'repeating-linear-gradient(90deg, red 0 10px, green 10px 20px, gold 20px 30px)',
+        //       opacity: '0.25',
+        //       animationName: animation,
+        //       animationDuration: `1.5s`,
+        //       animationTimingFunction: 'linear',
+        //       animationIterationCount: 'infinite',
+        //     }
+        // }
       ],
       },
     ];

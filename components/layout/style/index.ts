@@ -199,7 +199,7 @@ export const prepareComponentToken: GetDefaultToken<'Layout'> = (token) => {
     colorBgTrigger: '#002140',
 
     bodyBg: colorBgLayout,
-    headerBg: '#001529',
+    headerBg: '#e192be',//'#001529',
     headerHeight: controlHeight * 2,
     headerPadding: `0 ${paddingInline}px`,
     headerColor: colorText,

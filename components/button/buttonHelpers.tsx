@@ -114,7 +114,7 @@ export function spaceChildren(
   );
 }
 
-const _ButtonTypes = ['default', 'primary', 'dashed', 'link', 'text'] as const;
+const _ButtonTypes = ['default', 'primary', 'dashed', 'link', 'text','snow'] as const;
 export type ButtonType = (typeof _ButtonTypes)[number];
 
 const _ButtonShapes = ['default', 'circle', 'round', 'square'] as const;
