@@ -261,6 +261,7 @@ export default (genStyleHooks as any)(
             'background':'linear-gradient(135deg, #1e3a8a, #0284c7)',
             'boxShadow': '0 15px 30px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.2)',
             'span.snow-item':{
+                fontFamily: 'serif',
                 color:'white',
                 position: 'absolute',
                 top: '-10px',

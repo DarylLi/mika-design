@@ -1,6 +1,6 @@
 {
   "name": "mika-design",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A React UI Based on Ant Design 6.1.0",
   "sideEffects": [
     "*.css"
